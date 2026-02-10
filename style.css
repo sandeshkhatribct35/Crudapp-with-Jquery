@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 5px 10px;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: 0.5s;
+}
+
+.container {
+  width: min(480px, 90%);
+  margin-inline: auto;
+}
+
+.shopping-form {
+  padding: 1rem;
+  background: yellowgreen;
+  display: flex;
+  gap: 5px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.shopping-form input {
+  flex: 1;
+  padding: 5px 10px;
+  border-radius: inherit;
+  border: none;
+  outline: none;
+}
+
+.shopping-form button {
+  background: #000;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.shopping-filter button {
+  background: #ddd;
+  border-radius: 5px;
+}
+
+.shopping-filter button.active,
+.shopping-filter button:hover {
+  background: #000;
+  color: #fff;
+}
+
+.shopping-list {
+  list-style: none;
+  padding: 0;
+}
+
+.shopping-list li {
+  background: #fff;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.shopping-list li.dragging {
+  opacity: 0.5;
+  border: 1px dashed #999;
+}
+
+.shopping-list li.dragging * {
+  visibility: hidden;
+}
+
+.item-name {
+  flex: 1;
+  padding: 5px;
+}
+
+.shopping-list li[data-completed] .item-name {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.item-name[contenteditable="true"] {
+  outline: 2px solid yellowgreen;
+}
+
+.delete-button,
+.drag-icon {
+  background: transparent;
+  font-size: 1.25rem;
+  color: #ccc;
+}
+
+.delete-button:hover {
+  color: red;
+}
+
+.drag-icon {
+  cursor: move;
+}
+
+.shopping-action button {
+  color: #777;
+}
+
+.shopping-action button:hover {
+  color: #000;
+}
+
+.shopping-notice {
+  padding: 10px;
+  background: lightblue;
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+  margin-bottom: 1rem;
+}
+
+.shopping-notice.show {
+  display: block;
+}
+
+.shopping-notice.show ~ .shopping-filter,
+.shopping-notice.show ~ .shopping-action {
+  display: none;
+}
