@@ -1,1 +1,62 @@
-<p> this is j query </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRUD Shopping App</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Remix Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JS -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Shopping List</h1>
+
+    <!-- Add Item -->
+    <form class="shopping-form">
+      <input type="text" id="item" placeholder="Enter item name" required />
+      <button type="submit">+</button>
+    </form>
+
+    <!-- Empty Notice -->
+    <div class="shopping-notice">
+      Your shopping list is empty 🛒
+    </div>
+
+    <!-- Filter -->
+    <div class="shopping-filter">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="incomplete">Incomplete</button>
+      <button data-filter="completed">Completed</button>
+    </div>
+
+    <!-- List -->
+    <ul class="shopping-list"></ul>
+
+    <!-- Actions -->
+    <div class="shopping-action">
+      <button data-clear="all">Clear All</button>
+      <button data-clear="completed">Clear Completed</button>
+    </div>
+  </div>
+
+</body>
+</html>
